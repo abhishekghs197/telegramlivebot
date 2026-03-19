@@ -30,14 +30,6 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def handle_chat(message):
     try:
-        # User-এর মেসেজ ছোট হাতের অক্ষরে (lowercase) কনভার্ট করে নিচ্ছি মেলানোর সুবিধার জন্য
-        user_text = message.text.strip().lower()
-        
-        # কাস্টম প্রশ্নের উত্তর (Custom Question Answer)
-        if "what is your name" in user_text or "whats your name" in user_text:
-            bot.reply_to(message, "AD")
-            return  # উত্তর দিয়ে দেওয়া হয়েছে, তাই AI-কে আর কল করবে না
-
         # Show "typing..." status in Telegram while the AI generates a response
         bot.send_chat_action(message.chat.id, 'typing')
         
