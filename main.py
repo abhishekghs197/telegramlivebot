@@ -25,7 +25,7 @@ hf_client = OpenAI(
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Hello! I am a DeepSeek-R1 AI bot. Send me a message and I'll reply!")
+    bot.reply_to(message, "Hello! I am a problem-solving chatbot. Made me a CoderAbhi. Send me a message and I'll reply!")
 
 @bot.message_handler(func=lambda message: True)
 def handle_chat(message):
